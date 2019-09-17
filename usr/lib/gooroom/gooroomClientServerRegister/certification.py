@@ -267,6 +267,7 @@ class ServerCertification(Certification):
             ' %Y-%m-%d %H:%M:%S')
 
         #####write config
+        gpms['gkmUrl'] = domain
         self._add_config(gpms)
 
         #####support server version
