@@ -1,3 +1,13 @@
+gooroom-client-server-register (0.9.5+grm1u1) unstable; urgency=medium
+
+  [ hmkim ]
+  * [3de325d2] fixed recording bug in /etc/hosts
+  * [e85b2587] added gkmUrl in gcsr.conf again
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 26 Sep 2019 14:41:55 +0900
+
 gooroom-client-server-register (0.9.4+grm1u1) unstable; urgency=medium
 
   [ hmkim ]
