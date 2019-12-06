@@ -1,3 +1,13 @@
+gooroom-client-server-register (0.9.7+grm1u1) unstable; urgency=medium
+
+  [ hmkim ]
+  * [d725310c] changed copyright from GPL-3 to GPL-2.0
+  * [00795347] formatted debian/control
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 06 Dec 2019 11:58:52 +0900
+
 gooroom-client-server-register (0.9.6+grm1u1) unstable; urgency=medium
 
   [ hmkim ]
