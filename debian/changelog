@@ -1,3 +1,12 @@
+gooroom-client-server-register (0.9.8+grm1u1) unstable; urgency=medium
+
+  [ junsungc ]
+  * [372a1a3a] BTS-2634 : If registration fails, initialize the result log
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 20 Nov 2020 19:30:20 +0900
+
 gooroom-client-server-register (0.9.7+grm1u1) unstable; urgency=medium
 
   [ hmkim ]
