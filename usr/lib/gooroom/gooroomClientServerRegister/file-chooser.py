@@ -6,7 +6,7 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('Gdk', '3.0')
 from gi.repository import Gdk, Gtk
 
-gettext.install("gooroom-client-server-register", "/usr/share/gooroom/locale")
+gettext.install("gooroom-client-server-register", "/usr/share/locale")
 
 def file_chooser():
     dialog = Gtk.FileChooserDialog(_('Select a certificate'), None,

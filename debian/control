@@ -2,7 +2,8 @@ Source: gooroom-client-server-register
 Section: admin
 Priority: optional
 Maintainer: Gooroom Engineering Team <devel-os@gooroom.kr>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9),
+               meson
 Standards-Version: 3.9.5
 Homepage: http://www.gooroom.kr
 

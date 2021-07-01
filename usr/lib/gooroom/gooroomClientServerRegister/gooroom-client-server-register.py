@@ -3,9 +3,11 @@ import os
 import sys
 import argparse
 import gettext
-import registering
+#import registering
+from register_gui import GUIRegistering
+from register_shell import ShellRegistering
 
-gettext.install('gooroom-client-server-register', '/usr/share/gooroom/locale')
+gettext.install('gooroom-client-server-register', '/usr/share/locale')
 
 example_v1 = """v1.0)gooroom-client-server-register noninteractive -d gkm.gooroom.kr
                                                  [-C /usr/local/share/ca-certificates/server.crt]
@@ -81,7 +83,7 @@ def argument_parser():
     ni_regkey_help = subparsers.add_parser('noninteractive-regkey --help', help=_('Print help on the noninteractive-regkey command'))
     ni_regkey_parser.add_argument('-d', '--domain', required=True, help=_('Key management server hostname'))
     ni_regkey_parser.add_argument('-C', '--CAfile', help=_('(Option)PEM format file of gooroom root CA certificate'), nargs='?')
-    ni_regkey_parser.add_argument('-m', '--name', help=_('Option)Client name to distinguish from others:default=ip'), default=clientip)
+    ni_regkey_parser.add_argument('-m', '--name', help=_('(Option)Client name to distinguish from others:default=ip'), default=clientip)
     ni_regkey_parser.add_argument('-u', '--unit', help=_('Client organizational unit to use for the client certificate'))
     ni_regkey_parser.add_argument('-t', '--password-system-type', help=_('Password system type to use for the password hashing.'), default='Default', nargs='?')
     ni_regkey_parser.add_argument('-e', '--expiration-date', help=_('(Option)Certificates expiration date(format:YYYY-MM-DD)'), default='', nargs='?')
@@ -108,7 +110,8 @@ if __name__ == '__main__':
         exit(1)
 
     if args.cmd == 'gui':
-        registering.GUIRegistering()
+        gui_register = GUIRegistering()
+        gui_register.run()
     else:
-        shell_register = registering.ShellRegistering()
+        shell_register = ShellRegistering()
         shell_register.run(args)

@@ -1,0 +1,431 @@
+# Korean resource of Gooroom client-server register
+# Copyright (C) 2021
+# This file is distributed under the same license as the PACKAGE package.
+#  		by Gooroom Project Team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gooroom-client-server-register\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-22 13:21+0900\n"
+"PO-Revision-Date: 2021-06-22 13:27+Z0900\n"
+"Language-Team: gooroom <devel-os@gooroom.kr>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: certification.py:259
+msgid "Fail to register Gooroom Platform Management Server complete."
+msgstr "Fail to register Gooroom Platform Management Server complete."
+
+#: certification.py:364
+msgid "Requesting client certificate."
+msgstr "Requesting client certificate."
+
+#: certification.py:371
+msgid "Check the cert-reg-type."
+msgstr "Check the cert-reg-type."
+
+#: certification.py:374
+msgid "Check the client name."
+msgstr "Check the client name."
+
+#: certification.py:377
+msgid "Check the gooroom admin ID."
+msgstr "Check the gooroom admin ID."
+
+#: certification.py:380
+msgid "Check the password."
+msgstr "Check the password."
+
+#: certification.py:390
+msgid "The expiration period of the certificate can be set from today."
+msgstr "The expiration period of the certificate can be set from today."
+
+#: certification.py:394
+msgid "Incorrect date format, should be YYYY-MM-DD"
+msgstr "Incorrect date format, should be YYYY-MM-DD"
+
+#: certification.py:480
+msgid "List of Gooroom platform management server registration completed."
+msgstr "List of Gooroom platform management server registration completed."
+
+#: certification.py:483
+msgid "Client certificate issue failed."
+msgstr "Client certificate issue failed."
+
+#: certification.py:487
+msgid "Server response type is wrong. Contact your server administrator."
+msgstr "Server response type is wrong. Contact your server administrator."
+
+#: certification.py:491
+msgid "Client registration completed."
+msgstr "Client registration completed."
+
+#: file-chooser.py:12
+msgid "Select a certificate"
+msgstr "Select a certificate"
+
+#: file-chooser.py:18
+#: registergui.py:417
+msgid "Certificate files"
+msgstr "Certificate files"
+
+#: file-chooser.py:23
+#: registergui.py:422
+msgid "Any files"
+msgstr "Any files"
+
+#: gooroom-client-server-register.py:58
+msgid ""
+"Register certificate of gooroom root CA & gooroom platform management server"
+msgstr "Register certificate of gooroom root CA & gooroom platform management server"
+
+#: gooroom-client-server-register.py:60
+msgid "commands"
+msgstr "commands"
+
+#: gooroom-client-server-register.py:62
+msgid "Run as gtk graphical user interface"
+msgstr "Run as gtk graphical user interface"
+
+#: gooroom-client-server-register.py:63
+msgid "Run as command line interface"
+msgstr "Run as command line interface"
+
+#: gooroom-client-server-register.py:65
+msgid "Run as Noninteractive with shell."
+msgstr "Run as Noninteractive with shell."
+
+#: gooroom-client-server-register.py:67
+msgid "Print help on the noninteractive command"
+msgstr "Print help on the noninteractive command"
+
+#: gooroom-client-server-register.py:68
+#: gooroom-client-server-register.py:84
+msgid "Key management server hostname"
+msgstr "Key management server hostname"
+
+#: gooroom-client-server-register.py:69
+#: gooroom-client-server-register.py:85
+msgid "(Option)PEM format file of gooroom root CA certificate"
+msgstr "(Option)PEM format file of gooroom root CA certificate"
+
+#: gooroom-client-server-register.py:70
+msgid "Unique CN to use for the client certificate"
+msgstr "Unique CN to use for the client certificate"
+
+#: gooroom-client-server-register.py:71
+msgid "(Option)Client name to distinguish from others:default=ip"
+msgstr "(Option)Client name to distinguish from others:default=ip"
+
+#: gooroom-client-server-register.py:72
+#: gooroom-client-server-register.py:87
+msgid "Client organizational unit to use for the client certificate"
+msgstr "Client organizational unit to use for the client certificate"
+
+#: gooroom-client-server-register.py:73
+#: gooroom-client-server-register.py:88
+msgid "Password system type to use for the password hashing."
+msgstr "Password system type to use for the password hashing."
+
+#: gooroom-client-server-register.py:74
+msgid "GPMS admin ID"
+msgstr "GPMS admin ID"
+
+#: gooroom-client-server-register.py:75
+msgid "GPMS admin password"
+msgstr "GPMS admin password"
+
+#: gooroom-client-server-register.py:76
+#: gooroom-client-server-register.py:89
+msgid "(Option)Certificates expiration date(format:YYYY-MM-DD)"
+msgstr "(Option)Certificates expiration date(format:YYYY-MM-DD)"
+
+#: gooroom-client-server-register.py:77
+#: gooroom-client-server-register.py:90
+msgid "(Option)Description of the certificate"
+msgstr "(Option)Description of the certificate"
+
+#: gooroom-client-server-register.py:78
+#: gooroom-client-server-register.py:92
+msgid ""
+"(Option)Certificate Registration Type(0:create 1:update 2:create or update) "
+"default=create or update"
+msgstr ""
+"(Option)Certificate Registration Type(0:create 1:update 2:create or update) "
+"default=create or update"
+
+#: gooroom-client-server-register.py:81
+msgid ""
+"Run as NoninteractiveRegKey with shell using regstration key but id/pwd."
+msgstr ""
+"Run as NoninteractiveRegKey with shell using regstration key but id/pwd."
+
+#: gooroom-client-server-register.py:83
+msgid "Print help on the noninteractive-regkey command"
+msgstr "Print help on the noninteractive-regkey command"
+
+#: gooroom-client-server-register.py:91
+msgid "GPMS registration key"
+msgstr "GPMS registration key"
+
+#: gooroom-client-server-register.py:109
+msgid "Permission denied."
+msgstr "Permission denied."
+
+#: registergui.py:80
+#: registergui.py:84
+msgid "Gooroom Client Server Register"
+msgstr "Gooroom Client Server Register"
+
+#: registergui.py:85
+msgid ""
+"Register Gooroom Root CA in the client.\n"
+"And, add gooroom platform management servers from the server."
+msgstr ""
+"Register Gooroom Root CA in the client.\n"
+"And, add gooroom platform management servers from the server."
+
+#: registergui.py:86
+msgid "How to regist certificate"
+msgstr "How to regist certificate"
+
+#: registergui.py:87
+msgid "Create"
+msgstr "Create"
+
+#: registergui.py:90
+msgid "Update"
+msgstr "Update"
+
+#: registergui.py:93
+msgid "Server Information"
+msgstr "Server Information"
+
+#: registergui.py:94
+msgid "Record in /etc/hosts"
+msgstr "Record in /etc/hosts"
+
+#: registergui.py:97
+#: registergui.py:265
+#: registergui.py:277
+msgid "GKM"
+msgstr "GKM"
+
+#: registergui.py:97
+#: registergui.py:265
+#: registergui.py:277
+msgid "Enter the domain name"
+msgstr "Enter the domain name"
+
+#: registergui.py:100
+msgid "Select Certification"
+msgstr "Select Certification"
+
+#: registergui.py:101
+msgid "(Option)Select the certificate path of gooroom root CA"
+msgstr "(Option)Select the certificate path of gooroom root CA"
+
+#: registergui.py:103
+msgid "browse..."
+msgstr "browse..."
+
+#: registergui.py:106
+msgid "Client Information"
+msgstr "Client Information"
+
+#: registergui.py:108
+msgid "Register Information"
+msgstr "Register Information"
+
+#: registergui.py:111
+#: registergui.py:114
+#: registergui.py:216
+msgid "REGKEY"
+msgstr "REGKEY"
+
+#: registergui.py:117
+msgid "ID/PW"
+msgstr "ID/PW"
+
+#: registergui.py:120
+msgid "(Option)Comment"
+msgstr "(Option)Comment"
+
+#: registergui.py:122
+msgid "Cancel"
+msgstr "Cancel"
+
+#: registergui.py:123
+msgid "Register"
+msgstr "Register"
+
+#: registergui.py:170
+msgid "Client ID"
+msgstr "Client ID"
+
+#: registergui.py:175
+msgid "Client name"
+msgstr "Client name"
+
+#: registergui.py:176
+msgid "Client organizational unit"
+msgstr "Client organizational unit"
+
+#: registergui.py:194
+msgid "Gooroom admin ID"
+msgstr "Gooroom admin ID"
+
+#: registergui.py:195
+msgid "Password"
+msgstr "Password"
+
+#: registergui.py:196
+msgid "(Option)Certificate expiration date"
+msgstr "(Option)Certificate expiration date"
+
+#: registergui.py
+msgid "Enter the client name."
+msgstr "Enter the client name."
+
+#: registergui.py
+msgid "Enter the organizational unit."
+msgstr "Enter the organizational unit."
+
+#: registergui.py
+msgid "Enter the gooroom admin ID."
+msgstr "Enter the gooroom admin ID."
+
+#: registergui.py
+msgid "Enter the password."
+msgstr "Enter the password."
+
+#: registergui.py
+msgid "Enter the registration key."
+msgstr "Enter the registration key."
+
+#: registergui.py
+msgid "(Option)Enter the valid date(YYYY-MM-DD)"
+msgstr "(Option)Enter the valid date(YYYY-MM-DD)"
+
+#: registergui.py
+msgid "(Option)Enter the comment"
+msgstr "(Option)Enter the comment"
+
+#: registergui.py:265
+#: registergui.py:266
+#: registergui.py:267
+#: registergui.py:268
+msgid "Enter ip address"
+msgstr "Enter ip address"
+
+#: registergui.py:266
+msgid "GLM"
+msgstr "GLM"
+
+#: registergui.py:266
+#: registergui.py:267
+#: registergui.py:268
+msgid "This domain is set on the GPMS"
+msgstr "This domain is set on the GPMS"
+
+#: registergui.py:267
+msgid "GRM"
+msgstr "GRM"
+
+#: registergui.py:268
+msgid "GPMS"
+msgstr "GPMS"
+
+#: registergui.py:286
+msgid "Please enter the domain"
+msgstr "Please enter the domain"
+
+#: registergui.py:293
+msgid "GKM ip adress must be present"
+msgstr "GKM ip adress must be present"
+
+#: registergui.py:305
+msgid ""
+"Authentication server connection failed.\n"
+"Check the connection information and network status."
+msgstr ""
+"Authentication server connection failed.\n"
+"Check the connection information and network status."
+
+#: registergui.py:571
+msgid "Gooroom Management Server Registration"
+msgstr "Gooroom Management Server Registration"
+
+#: registergui.py
+msgid "Client registration failed."
+msgstr "Client registration failed."
+
+#: registergui.py
+msgid "Finished"
+msgstr "Finished"
+
+#: registergui.py
+msgid "Prev"
+msgstr "Prev"
+
+#: registergui.py
+msgid "Contact to Server Administrator for Detail Management."
+msgstr "Contact to Server Administrator for Detail Management."
+
+msgid "Contact to Server Administrator for Resolution."
+msgstr "Contact to Server Administrator for Resolution."
+
+msgid "Administrator"
+msgstr "담당 관리자"
+
+#: registershell.py:42
+msgid ""
+"Enter certificate registration type[0:create 1:update 2: create or update]: "
+msgstr "Enter certificate registration type[0:create 1:update 2: create or update]: "
+
+#: registershell.py:57
+msgid "Enter the client name"
+msgstr "Enter the client name"
+
+#: registershell.py:58
+msgid "Enter the organizational unit: "
+msgstr "Enter the organizational unit: "
+
+#: registershell.py:61
+msgid "Enter the authentication type[0:id/password 1:regkey]: "
+msgstr "Enter the authentication type[0:id/password 1:regkey]: "
+
+#: registershell.py:68
+msgid "Enter the gooroom admin ID: "
+msgstr "Enter the gooroom admin ID: "
+
+#: registershell.py:69
+msgid "Enter the password: "
+msgstr "Enter the password: "
+
+#: registershell.py:72
+msgid "Enter the registration key: "
+msgstr "Enter the registration key: "
+
+#: registershell.py:76
+msgid "(Option)Enter the valid date(YYYY-MM-DD): "
+msgstr "(Option)Enter the valid date(YYYY-MM-DD): "
+
+#: registershell.py:77
+msgid "(Option)Enter the comment: "
+msgstr "(Option)Enter the comment: "
+
+#: registershell.py:89
+msgid "Gooroom Client Server Register.\n"
+msgstr "Gooroom Client Server Register.\n"
+
+#: registershell.py:90
+msgid "Enter the domain name: "
+msgstr "Enter the domain name: "
+
+#: registershell.py:91
+msgid "(Option)Enter the certificate path of gooroom root CA: "
+msgstr "(Option)Enter the certificate path of gooroom root CA: "

@@ -21,7 +21,7 @@ import requests
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.SecurityWarning)
 
-gettext.install('gooroom-client-server-register', '/usr/share/gooroom/locale')
+gettext.install('gooroom-client-server-register', '/usr/share/locale')
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -414,6 +414,7 @@ class ClientCertification(Certification):
         csr, private_key, public_key = self.generate_csr(data['cn'], data['ou'])
         data['csr'] = csr
 
+        url = ''
         cert_reg_type = data['cert_reg_type']
         if api_type == 'id/pw':
             if cert_reg_type == '0':
