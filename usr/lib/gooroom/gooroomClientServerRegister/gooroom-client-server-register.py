@@ -7,7 +7,9 @@ import gettext
 from register_gui import GUIRegistering
 from register_shell import ShellRegistering
 
-gettext.install('gooroom-client-server-register', '/usr/share/locale')
+gettext.bindtextdomain('gooroom-client-server-register', '/usr/share/locale')
+gettext.textdomain('gooroom-client-server-register')
+_=gettext.gettext
 
 example_v1 = """v1.0)gooroom-client-server-register noninteractive -d gkm.gooroom.kr
                                                  [-C /usr/local/share/ca-certificates/server.crt]

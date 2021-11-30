@@ -19,7 +19,9 @@ import subprocess
 
 from pwd import getpwnam
 
-gettext.install("gooroom-client-server-register", "/usr/share/locale")
+gettext.bindtextdomain('gooroom-client-server-register', '/usr/share/locale')
+gettext.textdomain('gooroom-client-server-register')
+_=gettext.gettext
 
 class Registering():
     "Registering parent class"

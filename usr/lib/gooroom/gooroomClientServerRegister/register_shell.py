@@ -20,7 +20,9 @@ import subprocess
 from pwd import getpwnam
 from registering import Registering
 
-gettext.install("gooroom-client-server-register", "/usr/share/locale")
+gettext.bindtextdomain('gooroom-client-server-register', '/usr/share/locale')
+gettext.textdomain('gooroom-client-server-register')
+_=gettext.gettext
 
 class ShellRegistering(Registering):
 

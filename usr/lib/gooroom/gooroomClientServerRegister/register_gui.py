@@ -21,7 +21,9 @@ from pwd import getpwnam
 from registering import Registering
 from register_define import *
 
-gettext.install("gooroom-client-server-register", TRANSLATE_RES)
+gettext.bindtextdomain('gooroom-client-server-register', TRANSLATE_RES)
+gettext.textdomain('gooroom-client-server-register')
+_=gettext.gettext
 
 class RegisterThread(threading.Thread):
     def __init__(self, datas, application):
@@ -421,7 +423,7 @@ class GUIRegistering(Registering):
                         else:
                             return '+{}'.format(user)
             except:
-                AgentLog.get_logger().debug(agent_format_exc())
+                return '-'
 
         return '-'
 

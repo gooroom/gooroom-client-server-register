@@ -21,7 +21,9 @@ import requests
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.SecurityWarning)
 
-gettext.install('gooroom-client-server-register', '/usr/share/locale')
+gettext.bindtextdomain('gooroom-client-server-register', '/usr/share/locale')
+gettext.textdomain('gooroom-client-server-register')
+_=gettext.gettext
 
 import gi
 gi.require_version('Gtk', '3.0')
