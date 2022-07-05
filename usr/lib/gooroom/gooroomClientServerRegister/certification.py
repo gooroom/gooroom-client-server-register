@@ -490,7 +490,10 @@ class ClientCertification(Certification):
             self.result['log'].append(_('Server response type is wrong. Contact your server administrator.'))
             self.result['log'].append((type(error), error))
         else:
-            self._save_config('certificate', self.get_certificate_data(data['cn'], data['ou'], data['password_system_type']))
+            if 'simpleClientId' in response_data['data'][0]:
+                self._save_config('certificate', self.get_certificate_data(data['cn'], data['ou'], data['password_system_type'], response_data['data'][0]['simpleClientId']))
+            else:
+                self._save_config('certificate', self.get_certificate_data(data['cn'], data['ou'], data['password_system_type'], ''))
             self.result['log'].append(_('Client registration completed.'))
 
         yield self.result
@@ -613,16 +616,24 @@ class ClientCertification(Certification):
         # Do not save csr
         return csr, private_key, public_key
 
-    def get_certificate_data(self, client_name, organizational_unit, password_system_type):
+    def get_certificate_data(self, client_name, organizational_unit, password_system_type, simplified_id):
         "Return certificate section data of gcsr.config"
         sc = ServerCertification()
-        certificate_data = {'organizational_unit':organizational_unit,
-            'password_system_type':password_system_type.lower(),
-            'client_crt':self.client_crt,
-            'client_name':client_name,
-            'server_crt':sc.root_crt_path,
-			'kcmvp_on_off':self.kcmvp_on_off}
-
+        if simplified_id == '':
+            certificate_data = {'organizational_unit':organizational_unit,
+                'password_system_type':password_system_type.lower(),
+                'client_crt':self.client_crt,
+                'client_name':client_name,
+                'server_crt':sc.root_crt_path,
+                'kcmvp_on_off':self.kcmvp_on_off}
+        else:
+            certificate_data = {'organizational_unit':organizational_unit,
+                'password_system_type':password_system_type.lower(),
+                'client_crt':self.client_crt,
+                'client_name':client_name,
+                'server_crt':sc.root_crt_path,
+                'simplified_id': simplified_id,
+                'kcmvp_on_off':self.kcmvp_on_off}
         return certificate_data
 
 class ResponseError(Exception):
