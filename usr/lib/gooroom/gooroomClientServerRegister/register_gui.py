@@ -112,10 +112,10 @@ class GUIRegistering(Registering):
         textview.get_buffer().set_text(_("Register Gooroom Root CA in the client.\nAnd, add gooroom platform management servers from the server."))
         self.builder.get_object('label_cert_type').set_text(_('How to regist certificate'))
         self.builder.get_object('radiobutton_create').set_label(_('Create'))
-        self.builder.get_object('radiobutton_create').connect('toggled', self.on_radiobutton_create_clicked)
+#        self.builder.get_object('radiobutton_create').connect('toggled', self.on_radiobutton_create_clicked)
 
         self.builder.get_object('radiobutton_update').set_label(_('Update'))
-        self.builder.get_object('radiobutton_update').connect('toggled', self.on_radiobutton_create_clicked)
+#        self.builder.get_object('radiobutton_update').connect('toggled', self.on_radiobutton_create_clicked)
 
         self.builder.get_object('server_info_label').set_text(_('Server Information'))
         self.builder.get_object('checkbutton_hosts').set_label(_('Record in /etc/hosts'))
@@ -205,17 +205,14 @@ class GUIRegistering(Registering):
         for row in client_data_list.get_children():
             client_data_list.remove(row)
 
-        create_button = self.builder.get_object('radiobutton_create')
         client_id_row = self.create_regi_info_row(CLIENT_ID, label_text=_('Client ID'), entry_text=self.make_cn(), entry_sensitive=False)
-
         client_data_list.add(client_id_row)
 
-        if create_button.get_active():
-            client_name_row = self.create_regi_info_row(CLIENT_NAME, _('Client name'), _('Enter the client name.'), self.make_ipname())
-            client_classify_row = self.create_regi_info_row(CLIENT_UNIT, _('Client organizational unit'), _('Enter the organizational unit.'))
+        client_name_row = self.create_regi_info_row(CLIENT_NAME, _('Client name'), _('Enter the client name.'), self.make_ipname())
+        client_data_list.add(client_name_row)
 
-            client_data_list.add(client_name_row)
-            client_data_list.add(client_classify_row)
+        client_classify_row = self.create_regi_info_row(CLIENT_UNIT, _('Client organizational unit'), _('Enter the organizational unit.'))
+        client_data_list.add(client_classify_row)
 
         self.window.show_all()
 
