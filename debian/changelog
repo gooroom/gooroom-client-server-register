@@ -1,3 +1,18 @@
+gooroom-client-server-register (4.0.0+grm4u1) unstable; urgency=medium
+
+  [ hnc-cjs ]
+  * [57285796] Add SimplifiedId parameter from gkm-server
+  * [b19feb24] hosts에 적을 때 port 삭제
+
+  [ seolhee.sun ]
+  * [fe089336] Add Client Name Input Entry for Reregister
+
+  [ jongkyung.woo ]
+  * [e84abbfb] Rebuild on gooroom-4.0
+  * [32129980] 단말이 자동등록에 성공 했음에도 gcsr_auto.conf 파일이 삭제되지 않는 오류 수정
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 11 Mar 2024 19:08:20 +0900
+
 gooroom-client-server-register (1.3.0+grm3u1) unstable; urgency=medium
 
   [ seolhee.sun ]
