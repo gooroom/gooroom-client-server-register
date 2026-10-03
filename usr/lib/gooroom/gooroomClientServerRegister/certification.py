@@ -311,24 +311,24 @@ class ServerCertification(Certification):
 
             certs = ssl_conn.get_peer_cert_chain()
             server_crt = ssl_conn.get_peer_certificate()
+
+            # The root CA must come from the administrator (-C) or be pre-installed;
+            # a root learned from this unauthenticated connection is never trusted.
+            if not os.path.exists(self.root_crt_path):
+                raise Exception('No trusted GPMS root CA: give the root CA file (-C).')
+            with open(self.root_crt_path, 'rb') as f0:
+                anchor = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, f0.read())
+            store = OpenSSL.crypto.X509Store()
+            store.add_cert(anchor)
+            OpenSSL.crypto.X509StoreContext(store, server_crt, chain=list(certs or [])).verify_certificate()
             server_crt = OpenSSL.crypto.dump_certificate(OpenSSL.crypto.FILETYPE_PEM, server_crt)
             x509 = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_PEM, server_crt)
             pubkey = x509.get_pubkey()
             pubkeys = OpenSSL.crypto.dump_publickey(OpenSSL.crypto.FILETYPE_PEM,pubkey)
             self._save_key(pubkeys, self.server_key)
 
-            # TODO: register all key chain
-            root_crt = OpenSSL.crypto.dump_certificate(OpenSSL.crypto.FILETYPE_PEM, certs[-1])
-            if os.path.exists(self.root_crt_path):
-                with open(self.root_crt_path) as f0:
-                    old_crt = f0.read()
-                    if old_crt == root_crt.decode('utf8'):
-                        return
-
-            self.remove_file(self.root_crt_path)
-
-            with open(self.root_crt_path, 'wb') as f:
-                f.write(root_crt)
+            # the trusted root was not changed: nothing to install
+            return
 
         self._update_ca_certificate()
 
@@ -459,7 +459,6 @@ class ClientCertification(Certification):
             print("failed: get header")
 
         try:
-            print(req_data)
             res = requests.post(url, data=req_data, timeout=30)
             response_data = self.response(res)
             # save crt

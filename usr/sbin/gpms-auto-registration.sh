@@ -20,9 +20,6 @@ fi
 if [ -z $GKM_SERVER ] || [ -z $REG_KEY ]
 then
         echo Configuration is not properly set
-	echo $GKM_SERVER >> /tmp/gpms_autoregi_debug.txt
-	echo $REG_KEY >> /tmp/gpms_autoregi_debug.txt
-	echo $CLIENT_NAME >> /tmp/gpms_autoregi_debug.txt
         exit 1
 fi
 
