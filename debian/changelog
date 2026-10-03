@@ -1,3 +1,9 @@
+gooroom-client-server-register (4.1.0+grm4u1) unstable; urgency=medium
+
+  * [#1419] Never trust a root CA learned over the network.
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sat, 03 Oct 2026 18:49:40 +0900
+
 gooroom-client-server-register (4.0.0+grm4u1) unstable; urgency=medium
 
   [ hnc-cjs ]
